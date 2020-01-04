@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   env: {
       browser: true,
@@ -26,14 +28,15 @@ module.exports = {
   "overrides": [
       {
           "files": [
-          "test/**/*__Spec.js",
-          "test/**/*__Test.js"
+            "test/**/*__Spec.ts",
+            "test/**/*__Test.ts"
           ],
           "env": {
-          "jest": true
+            "jest": true
           }
       }
   ],
+  ignorePatterns: ['coverage/', 'node_modules/'],
   rules: {
       'react/jsx-filename-extension': [ 1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] } ],
       'jsx-a11y/control-has-associated-label': [0],
@@ -53,8 +56,11 @@ module.exports = {
      },
      'import/resolver': {
          'node': {
-             'extensions': [".js",".jsx",".ts",".tsx"]
-         }
+             'extensions': [".js",".jsx",".ts",".tsx"],
+         },
+         'jest': {
+            'jestConfigFile': './jest.config.js'
+          },
      }
 }
 };

@@ -1,6 +1,14 @@
 module.exports = {
-  testMatch: ['**/test/unit/**/*__Test.js'],
+  rootDir: '.',
   modulePaths: ['<rootDir>'],
-  collectCoverage: true,
-  collectCoverageFrom: ['**/src/**/*.{js}'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  testRegex: '(/test/(.*|\\.|/)(__Test|__Spec))\\.tsx?$',
+  moduleNameMapper: {
+    'src/(.*)': '<rootDir>/src/$1',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  collectCoverage: false,
+  collectCoverageFrom: ['**/src/**/*.{ts|tsx}'],
 };

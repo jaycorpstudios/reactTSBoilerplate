@@ -6,6 +6,10 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"] // resolve all modules prefixed with `src/` from `src` directory
+    },
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"
