@@ -29,7 +29,9 @@ module.exports = {
       {
           "files": [
             "test/**/*__Spec.ts",
-            "test/**/*__Test.ts"
+            "test/**/*__Spec.tsx",
+            "test/**/*__Test.ts",
+            "test/**/*__Test.tsx"
           ],
           "env": {
             "jest": true
