@@ -1,4 +1,4 @@
-import parseText from '@src/utils/parseText';
+import parseText from 'src/utils/parseText';
 import test from './testData';
 
 describe('Sample test demo file', () => {

@@ -8,13 +8,17 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"] // resolve all modules prefixed with `src/` from `src` directory
+      "src/*": ["src/*"] // resolve all modules prefixed with `src/` from `src` directory
     },
+    "rootDirs": [
+      "src",
+    ],
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"
-    ]
+    ],
   },
-  "include": ["src"],
+  "include": ["src", "test"],
+  "exclude": ["node_modules/*"],
   "compileOnSave": false
 }
